@@ -20,7 +20,7 @@ class UserController {
             this.getPhoto((content) => {
 
                 values.photo = content;
-                
+
                 this.addLine(values);
             });
 
@@ -42,15 +42,15 @@ class UserController {
         });
 
         let file = elements[0].files[0];
-        
+
         fileReader.onload = () => {
 
-            callback(fileReader.result)
+            callback(fileReader.result);
 
         };
 
         fileReader.readAsDataURL(file);
-        
+
     }
 
     getValues(){
